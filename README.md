@@ -56,6 +56,9 @@ Built with React + TypeScript + Vite for optimal development.
 - npm or yarn package manager
 - Modern web browser with ES6+ support
 
+- ### clone repo
+- https://github.com/MubbashirAhmed123/rsu_portfolio.git
+
 ### Installation
 
 npm install
