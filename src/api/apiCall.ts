@@ -4,14 +4,16 @@ export async function fetchStockPrices(symbols: string[]): Promise<Record<string
   console.log(" symbols", symbols);
 
   const prices: Record<string, number> = {};
-  const API_KEY = "NHPCZIF7FUN0IPL6"; 
+  const API_KEY = "YOUR_API"; 
 
   for (const symbol of symbols) {
     try {
       console.log("symbol", symbol);
 
       const response = await fetch(
-        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${API_KEY}`
+      `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=demo`
+
+        // `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${API_KEY}`
       );
 
       if (!response.ok) {
