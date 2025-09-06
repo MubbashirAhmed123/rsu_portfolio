@@ -45,7 +45,7 @@ export default function CompanyBreakdownChart() {
   }, [grants]);
 
   return (
-    <ReusableChart
+    <ReusableChart 
       data={chartData}
       type="pie"
       title="Company Breakdown"
@@ -54,7 +54,7 @@ export default function CompanyBreakdownChart() {
       emptyMessage="No grants available."
       height={350}
       formatTooltip={(context) => `${context.label}: $${context.parsed.toLocaleString()}`}
-      className="mb-6"
+      className="mb-6 relative w-full h-fit sm:h-[400px] md:h-fit"
     />
   );
 }

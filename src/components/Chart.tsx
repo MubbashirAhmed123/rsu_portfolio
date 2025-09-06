@@ -224,23 +224,25 @@ export default function ReusableChart({
   };
 
   return (
-    <div
-      className={`p-6 sm:p-8 rounded-2xl shadow-xl transition-colors duration-300 ${className} ${
-        isDark ? "bg-gray-800" : "bg-white"
+   <div
+  className={`p-6 sm:p-8 rounded-2xl shadow-xl transition-colors duration-300 ${className} ${
+    isDark ? "bg-gray-800" : "bg-white"
+  }`}
+>
+  {title && (
+    <h2
+      className={`text-2xl font-extrabold mb-5 border-b pb-3 ${
+        isDark ? "text-white border-gray-700" : "text-gray-900 border-gray-200"
       }`}
     >
-      {title && (
-        <h2
-          className={`text-2xl font-extrabold mb-5 border-b pb-3 ${
-            isDark ? "text-white border-gray-700" : "text-gray-900 border-gray-200"
-          }`}
-        >
-          {title}
-        </h2>
-      )}
-      <div className="relative" style={{ height: `${height}px` }}>
-        {renderChart()}
-      </div>
-    </div>
+      {title}
+    </h2>
+  )}
+
+  <div className="relative  h-[300px] sm:h-[400px] md:h-[500px]">
+    {renderChart()}
+  </div>
+</div>
+
   );
 }
